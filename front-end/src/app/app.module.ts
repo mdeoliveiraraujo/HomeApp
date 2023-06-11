@@ -11,18 +11,23 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzInputModule } from 'ng-zorro-antd/input';
 
-import { TestComponent } from './test/test.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ShoppingListsComponent } from './shopping-list/shopping-lists.component';
+import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-edit.component';
+
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TestComponent
+    ShoppingListsComponent,
+    ShoppingListEditComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,7 @@ registerLocaleData(en);
     BrowserAnimationsModule,
     NzButtonModule,
     NzIconModule,
+    NzInputModule,
     FontAwesomeModule
   ],
   providers: [

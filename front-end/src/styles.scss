@@ -2,3 +2,50 @@
 html {
     background-color: #CCD0F6;
 }
+
+/* Rectangle 2 */
+
+.std-btn {
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    left: 30px;
+    top: 0px;
+    
+    background: #AD7FFB;
+    border: 2px solid #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.stnd-alone-btn {
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 295px;
+    top: 0px;
+
+    background: #F594B7;
+    border: 2px solid #FFFFFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 57px;
+
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+
+    align-self: center;
+}
+
+button {
+    cursor: pointer;
+}

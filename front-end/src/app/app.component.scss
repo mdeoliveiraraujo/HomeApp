@@ -1,5 +1,10 @@
 body {
     background-color: #CCD0F6 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .main-div {

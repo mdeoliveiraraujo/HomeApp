@@ -17,13 +17,8 @@ export class HomeComponent {
   /**
    * logShowImage
    */
-  public logShowImage() {
-    this.showImage = !this.showImage;
-    console.log('showImage', this.showImage);
-
-    setTimeout(() => {
-      this.router.navigate(['test'])
-    }, 1000);
+  public createNewShoppingList() {
+    this.router.navigate(['new-list']);
   }
 
 }
