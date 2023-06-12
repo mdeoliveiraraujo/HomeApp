@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { lastValueFrom } from 'rxjs';
 import { ShoppingList } from './data/object-model/shopping-list';
 
 @Injectable({
@@ -12,8 +13,8 @@ export class ShoppingListService {
   /**
    * saveShoppingList
    */
-  public saveShoppingList(shoppingList: ShoppingList) {
+  public async saveShoppingList(shoppingList: ShoppingList) {
     console.log('activated service')
-    this.http.post('http://localhost:3000','s')
+    const resp = await lastValueFrom(this.http.get('http://localhost:3000'));
   }
 }

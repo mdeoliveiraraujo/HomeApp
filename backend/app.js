@@ -1,13 +1,30 @@
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
+const mysql = require('mysql');
+
+const con = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'HOMEAPP'
+})
+
 const app = express();
 const port = 3000;
 
-app.use(cors);
+// app.use(cors);
 app.use(express.json());
 
+// app.use(cors({
+//     origin: 'http://localhost:4200',
+//   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   }));
+
 app.get('/', (req, res) => {
-    res.send('heyaaaaaaaaa');
+    console.log('got a GET');
+    con.query('SELECT * FROM shopping_list', (err, result) => {
+        res.send(result);
+    })
 })
 
 app.post('/', (req, res) => {
