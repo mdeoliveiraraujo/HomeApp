@@ -21,4 +21,8 @@ export class HomeComponent {
     this.router.navigate(['new-list']);
   }
 
+  public navigateToShoppingListPage () {
+    this.router.navigate(['shopping-lists']);
+  }
+
 }

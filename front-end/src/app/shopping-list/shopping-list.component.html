@@ -1,0 +1,11 @@
+<div class="shopping-list__main">
+    <div class="shopping-list__searchbox">
+        <input type="text" placeholder="Search here">
+    </div>
+    <div class="shopping-list__forloop">
+        <ng-container *ngFor="let shoppingList of shoppingLists">
+            <app-shopping-list-row [shoppingList]="shoppingList"></app-shopping-list-row>
+        </ng-container>
+    </div>
+
+</div>

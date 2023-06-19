@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-edit.component';
-import { ShoppingListsComponent } from './shopping-list/shopping-lists.component';
+import { ShoppingListPageComponent } from './shopping-list-page/shopping-list-page.component';
 
 
 const routes: Routes = [
@@ -15,12 +14,8 @@ const routes: Routes = [
       },
       {
         path: 'shopping-lists',
-        component: ShoppingListsComponent,
+        component: ShoppingListPageComponent,
       },
-          {
-            path: 'new-list',
-            component: ShoppingListEditComponent
-          },
       { path: '**', redirectTo: 'home' }
     ],
   },

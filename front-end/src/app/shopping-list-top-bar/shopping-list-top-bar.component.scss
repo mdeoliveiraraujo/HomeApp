@@ -1,0 +1,25 @@
+.shopping-list-top-bar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    height: 50px;
+    background-color: purple;
+}
+
+.home-button {
+    color: #f594b7;
+    font-size: 2.5em;
+    border-color: white;
+    border-width: 2px;
+    margin-left: 0.2em;
+}
+
+.shopping-list-title__text {
+    color: whitesmoke;
+    font-size: 1.5em;
+}
+
+.shopping-list-title__div {
+    display: flex;
+    justify-content: center;
+}

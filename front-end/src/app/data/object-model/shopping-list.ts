@@ -6,6 +6,11 @@ export class ShoppingList {
     private title: string = '';
     private items: ShoppingItem[] = [];
 
+    constructor(
+        title = '',
+        items = []
+    ) {}
+
     public getTitle(): string {
         return this.title;
     }

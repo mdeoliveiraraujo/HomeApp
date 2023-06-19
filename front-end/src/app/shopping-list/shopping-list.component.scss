@@ -1,0 +1,26 @@
+.shopping-list__main {
+    display: grid;
+    grid-template-rows: 1fr 30fr;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin: 10px;
+}
+
+.shopping-list__searchbox {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    input {
+        width: 90%;
+    }
+}
+
+.shopping-list__forloop {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 5px 20px 0px 20px;
+    row-gap: 5px;
+}

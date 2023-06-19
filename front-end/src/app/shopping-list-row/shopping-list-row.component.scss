@@ -1,0 +1,10 @@
+.shopping-list-row__item {
+    height: 30px;
+    background-color: #f594b7;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 10fr 3fr;
+}

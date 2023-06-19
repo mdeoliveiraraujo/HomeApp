@@ -17,8 +17,10 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzInputModule } from 'ng-zorro-antd/input';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ShoppingListsComponent } from './shopping-list/shopping-lists.component';
-import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-edit.component';
+import { ShoppingListPageComponent } from './shopping-list-page/shopping-list-page.component';
+import { ShoppingListTopBarComponent } from './shopping-list-top-bar/shopping-list-top-bar.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingListRowComponent } from './shopping-list-row/shopping-list-row.component';
 
 registerLocaleData(en);
 
@@ -26,8 +28,10 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     HomeComponent,
-    ShoppingListsComponent,
-    ShoppingListEditComponent
+    ShoppingListPageComponent,
+    ShoppingListTopBarComponent,
+    ShoppingListComponent,
+    ShoppingListRowComponent
   ],
   imports: [
     BrowserModule,
