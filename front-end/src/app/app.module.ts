@@ -21,6 +21,7 @@ import { ShoppingListPageComponent } from './shopping-list-page/shopping-list-pa
 import { ShoppingListTopBarComponent } from './shopping-list-top-bar/shopping-list-top-bar.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListRowComponent } from './shopping-list-row/shopping-list-row.component';
+import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-edit.component';
 
 registerLocaleData(en);
 
@@ -31,7 +32,8 @@ registerLocaleData(en);
     ShoppingListPageComponent,
     ShoppingListTopBarComponent,
     ShoppingListComponent,
-    ShoppingListRowComponent
+    ShoppingListRowComponent,
+    ShoppingListEditComponent
   ],
   imports: [
     BrowserModule,

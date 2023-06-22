@@ -6,4 +6,16 @@
         {{shoppingList.getTitle() + ' ' + '(' + shoppingList.getItems().length + ')'}}
     </div>
         
+    <div>
+        <button
+            style="color: black"
+            (click)="toParent(shoppingList.getId(), 'edit')">
+            Edit
+        </button>
+        <button
+            style="color: black"
+            (click)="toParent(shoppingList.getId(), 'delete')">
+            Delete
+        </button>
+    </div>
 </div>

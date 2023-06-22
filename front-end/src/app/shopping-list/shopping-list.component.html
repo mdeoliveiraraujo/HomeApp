@@ -4,7 +4,9 @@
     </div>
     <div class="shopping-list__forloop">
         <ng-container *ngFor="let shoppingList of shoppingLists">
-            <app-shopping-list-row [shoppingList]="shoppingList"></app-shopping-list-row>
+            <app-shopping-list-row
+                [shoppingList]="shoppingList"
+                (actionEmitter)="processAction($event)"></app-shopping-list-row>
         </ng-container>
     </div>
 

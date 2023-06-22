@@ -5,10 +5,12 @@ export class ShoppingList {
     
     private title: string = '';
     private items: ShoppingItem[] = [];
+    private id: number = -1;
 
     constructor(
         title = '',
-        items = []
+        items = [],
+        id = -1
     ) {}
 
     public getTitle(): string {
@@ -54,5 +56,13 @@ export class ShoppingList {
     public setItemStatus(item: ShoppingItem, newStatus: boolean) {
         const targetItem: any = this.items.find(item => item.name === targetItem.name);
         targetItem.check = newStatus;
+    }
+
+    public getId() {
+        return this.id;
+    }
+
+    public setId(id: number) {
+        this.id = id;
     }
 }
