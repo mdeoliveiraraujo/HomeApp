@@ -19,6 +19,7 @@ export class ShoppingListComponent implements OnInit {
     public processAction(evt: { shoppingListId: number, action: string }) {
         switch (evt.action) {
             case 'edit':
+                console.log('eaui')
                 this.shoppingListService.edit(evt.shoppingListId);
                 break;
             case 'delete':
@@ -26,8 +27,6 @@ export class ShoppingListComponent implements OnInit {
                 break;
             default:
                 break;
-        }
-        if (evt.action === 'edit') {
         }
     }
 }

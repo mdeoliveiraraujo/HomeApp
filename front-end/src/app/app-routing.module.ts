@@ -4,7 +4,6 @@ import { HomeComponent } from './home/home.component';
 import { ShoppingListPageComponent } from './shopping-list-page/shopping-list-page.component';
 import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-edit.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -16,14 +15,12 @@ const routes: Routes = [
       {
         path: 'shopping-lists',
         component: ShoppingListPageComponent,
-        children: [
-          {
-            path: 'edit',
-            component: ShoppingListEditComponent
-          }
-        ]
       },
-      { path: '**', redirectTo: 'home' }
+      {
+        path: 'shopping-lists/edit/:id',
+        component: ShoppingListEditComponent,
+      },
+      { path: '**', redirectTo: 'home' },
     ],
   },
 ];
