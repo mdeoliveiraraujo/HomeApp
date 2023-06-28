@@ -38,7 +38,9 @@ front-end/coverage
 front-end/libpeerconnection.log
 front-end/testem.log
 front-end/typings
+front-end/documentation
 
 # System files
 .DS_Store
 Thumbs.db
+

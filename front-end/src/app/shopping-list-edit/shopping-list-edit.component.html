@@ -1,20 +1,23 @@
-<div class="shopping-list-edit-top-bar">
-  <div>
-    <span
-      class="home-button"
-      nz-icon
-      nzType="dollar-circle"
-      nzTheme="outline"
-    ></span>
-  </div>
-  <div class="shopping-list-title__div">
-    <span class="shopping-list-title__text">
-      {{ shoppingList.getTitle() }}
-    </span>
-  </div>
-</div>
-<div>
-    <div *ngFor="let item of shoppingList.getItems()">
-      {{ item.name }} - {{ item.quantity }}
+<div *ngIf="shoppingListForm" [formGroup]="shoppingListForm">
+    <div class="shopping-list-edit-top-bar">
+        <div>
+            <span
+                class="home-button"
+                nz-icon
+                nzType="dollar-circle"
+                nzTheme="outline">
+            </span>
+        </div>
+        <div class="shopping-list-title__div">
+            <span class="shopping-list-title__text">
+                <input type="text" formControlName="title">
+            </span>
+        </div>
     </div>
+    <div>
+        <div *ngFor="let item of shoppingList.getItems()">
+            {{ item.name }} - {{ item.quantity }}
+        </div>
+    </div>
+
 </div>
