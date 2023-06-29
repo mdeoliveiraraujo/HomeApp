@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ShoppingListService } from '../shopping-list.service';
 import { ShoppingList } from '../data/object-model/shopping-list';
 import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-shopping-list-edit',
@@ -58,5 +58,34 @@ export class ShoppingListEditComponent implements OnInit {
                 })
             ),
         });
+    }
+
+    /**
+     * retrieves the formarray from the parent formgroup
+     */
+    public get itemsArray(): FormArray {
+        return this.shoppingListForm?.get('items') as FormArray;
+    }
+
+    /**
+     * gets an element of the formarray by index
+     * @param index 
+     * @returns 
+     */
+    public getItemsArrayFormGroup(index: number): FormGroup {
+        return this.itemsArray.at(index) as FormGroup;
+    }
+
+    /**
+     * adds a new item to the shopping list
+     */
+    public addNewItem() {
+        const itemFormGroup = this.fb.group({
+            name: ['', Validators.required],
+            check: [false],
+            description: [''],
+            quantity: ['']
+        })
+        this.itemsArray.push(itemFormGroup);
     }
 }

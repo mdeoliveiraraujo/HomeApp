@@ -5,19 +5,23 @@
                 class="home-button"
                 nz-icon
                 nzType="dollar-circle"
-                nzTheme="outline">
+                nzTheme="outline"
+            >
             </span>
         </div>
         <div class="shopping-list-title__div">
             <span class="shopping-list-title__text">
-                <input type="text" formControlName="title">
+                <input type="text" formControlName="title" />
             </span>
         </div>
     </div>
-    <div>
-        <div *ngFor="let item of shoppingList.getItems()">
-            {{ item.name }} - {{ item.quantity }}
+    <div formArrayName="items">
+        <div *ngFor="let item of itemsArray.controls; index as itemsIndex" [formGroupName]="itemsIndex">
+            <input form type="checkbox" name="" id="" formControlName="check">
+            <input type="text" formControlName="name">
+            <input type="text" formControlName="description">
+            <input type="text" formControlName="quantity">
         </div>
     </div>
-
+    <button (click)="addNewItem()">Add +</button>
 </div>
